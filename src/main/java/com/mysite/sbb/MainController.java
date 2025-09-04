@@ -9,7 +9,12 @@ public class MainController {
     @GetMapping("/sbb")
     @ResponseBody
     public String index() {
-        System.out.println("알자드 고온!!!");
-        return "만두만두 군만9999두";
+        return "안녕하세요. 게시판에 오신것을 환영합니다.";
     }
+
+    @GetMapping("/")
+    public String root() {
+        return "redirect:/question/list";
+    }
+
 }
